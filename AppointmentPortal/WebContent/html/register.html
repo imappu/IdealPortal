@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css\plogin.css" rel="stylesheet" />
+	<link href="css\register.css" rel="stylesheet" />
+	
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.js"></script>
+	<script src="js\register.js" type="text/javascript"></script>
+	<script src="js\back.js"></script>
+</head>
+
+<body >
+
+<div class="back">
+<button  type="button" id="back" onclick="goBack()" style="background-color: lightgray;color:white;border-radius:8px;">Home</button>
+</div>
+        <div id="tophead">
+           <table id="headertable"> <tr><th>Register Patient</th></tr></table>
+        </div>
+
+	
+  
+
+	   <div class="loginPage">
+            <form   id="register-form" novalidate="novalidate"  method="post" action="Register" ">
+             
+                <input type="text" id="firstname" name="firstname"  placeholder="Enter First Name..">
+
+				
+                <input type="text" id="lastname" name="lastname" placeholder="Enter  Last Name..">
+
+				<input type="text" id="contact"  name="contact"  placeholder="Enter your contact number">
+				
+				<input type="email" id="email" name="email"  placeholder="Enter Email Id..">
+
+				<input type="password" name="password" id="password" placeholder="choose password..">
+
+				<input type="password" name="password_confirm" id="password_confirm" placeholder="Re enter password..">
+
+				<input type="text" id="dob" name="dob" placeholder="Select Date Of Birth">
+              
+				
+                <select type="gender" id="gender" name="gender" placeholder="Select Gender.." class="required"   onclick="getVal(this);">
+				<option value=""><strong>select</strong></option>
+				<option value="Male">Male</option>
+				<option value="Female">Female</option>
+				<option value="Other">Other</option>
+				</select>
+                <input type="text" id="address" name="address" placeholder="Enter Address..">
+
+				<input type="submit" value="Register"/>
+			</form>
+        
+        <span class="spanSuccess"></span>  
+        </div>
+      <!--  <script>
+        function getVal(value) {
+    		var val = $(value).text();
+    		alert(val);
+    		$.ajax({
+    			type : "post",
+    			url : "/Portal/Register",
+    			data : {
+    				"name" : val
+    			}
+    		}).done(function(result) {
+    			//var response = result.responseText.evalJSON();
+    			//alert(result);
+    			alert("Yes its done");
+    			//$("#other").prop("disabled", true);
+    		});
+    	}
+        </script>-->
+        
+
+	 </body>
+</html>

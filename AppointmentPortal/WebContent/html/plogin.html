@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<link rel="stylesheet" type="text/css" href="css\home.css">
+		<link rel="stylesheet" type="text/css" href="css\plogin.css">
+
+		
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.js"></script>
+		<script src="js\plogin.js"></script>
+		<script src="js\back.js"></script>
+		
+	</head>
+	<body>
+<div class="back">
+<button  type="button" id="back" onclick="goBack()" style="background-color: lightgray;color:white;border-radius:8px;">Home</button>
+</div>
+		<div>
+				<center>
+				<form name="patientLogin" id="patientLogin"  action="plogin" method="post">
+				<label for="username"><h2 style="color:gray">Patient Login</h2></label><br>
+				<input type="text" id="username" name="username" placeholder="Enter User Name.."><br>
+				<input type="password" id="password" name="password" placeholder="Enter Password.."><br>
+				<input type="submit" value="Log in" id="button"/>
+				
+            </form></center>
+		</div>
+
+
+			
+		
+
+</body>
+</html>

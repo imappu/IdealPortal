@@ -1,0 +1,14 @@
+body {
+	background-color: blue;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+table,th,td,tr
+{
+	
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+
